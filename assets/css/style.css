@@ -1,0 +1,37 @@
+
+body {
+ background-color: #d3d3d3;
+}
+
+.instructions {
+width: 600px;
+margin-left: 10px;
+
+}
+
+.randomNumber {
+
+font-weight: bold;
+font-size: 30px;
+margin: 10px;
+}
+
+.crystal-buttons {
+	
+	height: 100px;
+	width: 100px;
+	background: white;
+	margin: 5px;
+}
+
+.winsLosses {
+	margin: 10px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.userResult {
+	margin: 10px;
+	font-size: 25px;
+	font-weight: bold;
+}
