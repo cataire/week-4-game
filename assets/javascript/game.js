@@ -1,7 +1,7 @@
 
 //Variables
 var userResult = 0;
-var randomNumber = Math.floor(Math.random()*100)+19;
+var randomNumber;
 var valuesIntoInt;
 var randomPick;
 var wins = 0;
@@ -13,21 +13,6 @@ randomPick = Math.floor(Math.random()*12+1);
 console.log(randomPick);
 };
 
-
-
-// function createButtons() {
-
-// 	for (var i = 0; i < 5; i++) {
-
-// 		var crystalButton = $("<button>");
-// 		crystalButton.addClass("crystal-buttons");
-
-// 		randomValue();
-// 		$(".crystal-buttons").attr("value", randomPick);
-	
-// 		$(".buttons").append(crystalButton)
-// 	}
-// };
 
 function endGame() {
 userResult = 0;
@@ -58,21 +43,21 @@ randomValue();
 
 function startGame() {
 
+getButtonValues();
+randomNumber = Math.floor(Math.random()*80)+19;
+screenUpdate();
 
-	getButtonValues();
-	randomNumber = Math.floor(Math.random()*80)+19;
-	console.log("Random number: " + randomNumber);
-	screenUpdate();
+};
 
 
 $(".crystal-buttons").click(function(){
 
 var getValue = $(this).attr("value");
-console.log(getValue);
 valuesIntoInt = parseInt(getValue);
+console.log(valuesIntoInt);
 userResult+=valuesIntoInt;
+
 screenUpdate();
-console.log(userResult);
 
 
 if (userResult === randomNumber) {
@@ -84,6 +69,8 @@ if (userResult === randomNumber) {
 
 };
 
+screenUpdate();
+
 if (userResult > randomNumber) {
 	
 	losses++;
@@ -92,10 +79,11 @@ if (userResult > randomNumber) {
 	endGame();
 };
 
+screenUpdate();
+
 });
 
-};
-
+screenUpdate();
 startGame();
 
 
